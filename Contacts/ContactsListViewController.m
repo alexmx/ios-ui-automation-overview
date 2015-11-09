@@ -23,6 +23,8 @@
 {
     [super viewDidLoad];
     
+    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    
     self.contacts = [NSMutableArray array];
     for (int i = 0; i < 20; i++) {
         Contact *contact = [Contact new];
@@ -61,6 +63,21 @@
     cell.contact = self.contacts[indexPath.row];
     
     return cell;
+}
+
+#pragma mark - UITableViewDelegate
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [self.contacts removeObjectAtIndex:indexPath.row];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
 }
 
 @end
