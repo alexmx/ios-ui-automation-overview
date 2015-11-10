@@ -24,14 +24,6 @@
     [super viewDidLoad];
     
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
-    
-    self.contacts = [NSMutableArray array];
-    for (int i = 0; i < 20; i++) {
-        Contact *contact = [Contact new];
-        contact.icon = [UIImage imageNamed:@"contact-icon"];
-        contact.name = [NSString stringWithFormat:@"Contact %d", i];
-        [self.contacts addObject:contact];
-    }
 }
 
 #pragma mark - Segues

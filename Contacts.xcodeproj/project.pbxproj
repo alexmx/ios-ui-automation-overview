@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CDAF42061BF1EB09008D6FC4 /* EditContactDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDAF42051BF1EB09008D6FC4 /* EditContactDetailsViewController.m */; };
+		CDAF42091BF1EE03008D6FC4 /* DismissSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = CDAF42081BF1EE03008D6FC4 /* DismissSegue.m */; };
 		CDE68CDA1BF0CF3E00A388DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE68CD91BF0CF3E00A388DF /* main.m */; };
 		CDE68CDD1BF0CF3E00A388DF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE68CDC1BF0CF3E00A388DF /* AppDelegate.m */; };
 		CDE68CE01BF0CF3E00A388DF /* ContactsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE68CDF1BF0CF3E00A388DF /* ContactsListViewController.m */; };
@@ -31,6 +33,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CDAF42041BF1EB09008D6FC4 /* EditContactDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditContactDetailsViewController.h; sourceTree = "<group>"; };
+		CDAF42051BF1EB09008D6FC4 /* EditContactDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditContactDetailsViewController.m; sourceTree = "<group>"; };
+		CDAF42071BF1EE03008D6FC4 /* DismissSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DismissSegue.h; sourceTree = "<group>"; };
+		CDAF42081BF1EE03008D6FC4 /* DismissSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DismissSegue.m; sourceTree = "<group>"; };
 		CDE68CD41BF0CF3E00A388DF /* Contacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDE68CD81BF0CF3E00A388DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDE68CD91BF0CF3E00A388DF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -72,6 +78,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CDAF420A1BF1EF7F008D6FC4 /* Segues */ = {
+			isa = PBXGroup;
+			children = (
+				CDAF42071BF1EE03008D6FC4 /* DismissSegue.h */,
+				CDAF42081BF1EE03008D6FC4 /* DismissSegue.m */,
+			);
+			name = Segues;
+			sourceTree = "<group>";
+		};
 		CDE68CCB1BF0CF3E00A388DF = {
 			isa = PBXGroup;
 			children = (
@@ -162,10 +177,13 @@
 		CDE68D0B1BF0DC8400A388DF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CDAF420A1BF1EF7F008D6FC4 /* Segues */,
 				CDE68CDE1BF0CF3E00A388DF /* ContactsListViewController.h */,
 				CDE68CDF1BF0CF3E00A388DF /* ContactsListViewController.m */,
 				CDE68CE11BF0CF3E00A388DF /* ContactDetailsViewController.h */,
 				CDE68CE21BF0CF3E00A388DF /* ContactDetailsViewController.m */,
+				CDAF42041BF1EB09008D6FC4 /* EditContactDetailsViewController.h */,
+				CDAF42051BF1EB09008D6FC4 /* EditContactDetailsViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -280,9 +298,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDE68D091BF0DC6F00A388DF /* ContactCell.m in Sources */,
+				CDAF42091BF1EE03008D6FC4 /* DismissSegue.m in Sources */,
 				CDE68D041BF0D64100A388DF /* UIColor+Utils.m in Sources */,
 				CDE68CDD1BF0CF3E00A388DF /* AppDelegate.m in Sources */,
 				CDE68CE01BF0CF3E00A388DF /* ContactsListViewController.m in Sources */,
+				CDAF42061BF1EB09008D6FC4 /* EditContactDetailsViewController.m in Sources */,
 				CDE68D0E1BF0E1A200A388DF /* Contact.m in Sources */,
 				CDE68CDA1BF0CF3E00A388DF /* main.m in Sources */,
 				CDE68CE31BF0CF3E00A388DF /* ContactDetailsViewController.m in Sources */,
@@ -434,10 +454,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -454,10 +471,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = ContactsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alexmx.$(PRODUCT_NAME:rfc1034identifier)";

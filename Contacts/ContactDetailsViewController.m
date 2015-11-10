@@ -22,7 +22,7 @@
     [super viewDidLoad];
     
     self.contactIconImageView.image = self.contact.icon;
-    self.contactNameLabel.text = self.contact.name;
+    self.contactNameLabel.text = [NSString stringWithFormat:@"%@ %@", self.contact.firstName, self.contact.lastName];
 }
 
 @end

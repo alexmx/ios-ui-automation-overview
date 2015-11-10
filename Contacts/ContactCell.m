@@ -43,7 +43,7 @@
     if (contact != _contact) {
         _contact = contact;
         
-        self.contactName = contact.name;
+        self.contactName = [NSString stringWithFormat:@"%@ %@", contact.firstName, contact.lastName];
         self.contactIcon = contact.icon;
     }
 }

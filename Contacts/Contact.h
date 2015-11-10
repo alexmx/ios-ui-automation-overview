@@ -12,6 +12,7 @@
 @interface Contact : NSObject
 
 @property (nonatomic, strong) UIImage *icon;
-@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *firstName;
+@property (nonatomic, copy) NSString *lastName;
 
 @end
