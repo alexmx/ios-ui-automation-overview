@@ -7,8 +7,9 @@
 //
 
 #import "ContactDetailsViewController.h"
+#import "EditContactDetailsViewController.h"
 
-@interface ContactDetailsViewController ()
+@interface ContactDetailsViewController () <EditContactDetailsViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *contactIconImageView;
 @property (weak, nonatomic) IBOutlet UILabel *contactNameLabel;
@@ -23,6 +24,14 @@
     
     self.contactIconImageView.image = self.contact.icon;
     self.contactNameLabel.text = [NSString stringWithFormat:@"%@ %@", self.contact.firstName, self.contact.lastName];
+}
+
+#pragma mark - EditContactDetailsViewControllerDelegate
+
+- (void)editContactDetailsViewController:(EditContactDetailsViewController *)editVC
+                    didEndEditingContact:(Contact *)contact
+{
+
 }
 
 @end

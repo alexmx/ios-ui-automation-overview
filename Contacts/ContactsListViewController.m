@@ -8,12 +8,13 @@
 
 #import "ContactsListViewController.h"
 #import "ContactDetailsViewController.h"
+#import "EditContactDetailsViewController.h"
 #import "ContactCell.h"
 #import "Contact.h"
 
-@interface ContactsListViewController ()
+@interface ContactsListViewController () <EditContactDetailsViewControllerDelegate>
 
-@property NSMutableArray *contacts;
+@property (nonatomic, strong)  NSMutableArray *contacts;
 
 @end
 
@@ -24,6 +25,17 @@
     [super viewDidLoad];
     
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
+}
+
+#pragma mark - Accessors
+
+- (NSMutableArray *)contacts
+{
+    if (!_contacts) {
+        _contacts = [NSMutableArray array];
+    }
+    
+    return _contacts;
 }
 
 #pragma mark - Segues
@@ -70,6 +82,14 @@
         [self.contacts removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
+}
+
+#pragma mark - EditContactDetailsViewControllerDelegate
+
+- (void)editContactDetailsViewController:(EditContactDetailsViewController *)editVC
+                    didEndEditingContact:(Contact *)contact
+{
+    
 }
 
 @end

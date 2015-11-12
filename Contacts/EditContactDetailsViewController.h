@@ -7,7 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Contact.h"
+
+@class EditContactDetailsViewController;
+
+@protocol EditContactDetailsViewControllerDelegate <NSObject>
+
+- (void)editContactDetailsViewController:(EditContactDetailsViewController *)editVC didEndEditingContact:(Contact *)contact;
+
+@end
 
 @interface EditContactDetailsViewController : UITableViewController
+
+@property (nonatomic, readonly) Contact *contact;
+@property (nonatomic, weak) id<EditContactDetailsViewControllerDelegate> delegate;
+
+- (instancetype)initWithContact:(Contact *)contact;
 
 @end

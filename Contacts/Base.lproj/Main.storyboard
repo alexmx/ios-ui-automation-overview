@@ -140,13 +140,16 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WXJ-lW-tM7">
                                                     <rect key="frame" x="15" y="19" width="83" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xrA-LS-W3q">
                                                     <rect key="frame" x="118" y="15" width="467" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="fyF-rt-AuR" id="XQT-QN-QL9"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -168,13 +171,16 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLj-G5-k7S">
                                                     <rect key="frame" x="15" y="19" width="82" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uSX-Ot-pHZ">
                                                     <rect key="frame" x="117" y="15" width="468" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="fyF-rt-AuR" id="AAj-Y1-taT"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -197,7 +203,7 @@
                     <navigationItem key="navigationItem" title="Edit Contact Details" id="Y0p-ZM-ckx">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="5I2-CX-gDG">
                             <connections>
-                                <segue destination="Ah7-4n-0Wa" kind="custom" customClass="DismissSegue" id="XMQ-in-wPM"/>
+                                <action selector="didFinish:" destination="fyF-rt-AuR" id="R8W-0Q-GSm"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -268,6 +274,5 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="GuY-Vj-bOz"/>
-        <segue reference="XMQ-in-wPM"/>
     </inferredMetricsTieBreakers>
 </document>
