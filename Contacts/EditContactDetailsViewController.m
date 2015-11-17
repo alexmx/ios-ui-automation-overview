@@ -44,11 +44,25 @@
     [super viewWillDisappear:animated];
 }
 
+- (IBAction)didCancel:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 - (IBAction)didFinish:(id)sender
 {
     if (self.firstNameTextField.text.length || self.lastNameTextField.text.length) {
         if ([self.delegate respondsToSelector:@selector(editContactDetailsViewController:didEndEditingContact:)]) {
+            
+            if (!self.contact) {
+                self.contact = [[Contact alloc] init];
+            }
+            
+            self.contact.firstName = self.firstNameTextField.text;
+            self.contact.lastName = self.lastNameTextField.text;
+            
             [self.delegate editContactDetailsViewController:self didEndEditingContact:self.contact];
+            [self dismissViewControllerAnimated:YES completion:nil];
         }
     }
 }

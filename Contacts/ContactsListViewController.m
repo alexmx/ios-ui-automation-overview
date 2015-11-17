@@ -46,6 +46,10 @@
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         Contact *contact = self.contacts[indexPath.row];
         [[segue destinationViewController] setContact:contact];
+    } else if ([[segue identifier] isEqualToString:@"showEditScreen"]) {
+        UINavigationController *navC = segue.destinationViewController;
+        EditContactDetailsViewController *editContactVC = [navC.viewControllers firstObject];
+        editContactVC.delegate = self;
     }
 }
 
@@ -89,7 +93,8 @@
 - (void)editContactDetailsViewController:(EditContactDetailsViewController *)editVC
                     didEndEditingContact:(Contact *)contact
 {
-    
+    [self.contacts addObject:contact];
+    [self.tableView reloadData];
 }
 
 @end

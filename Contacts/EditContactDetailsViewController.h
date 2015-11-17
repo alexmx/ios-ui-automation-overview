@@ -19,7 +19,7 @@
 
 @interface EditContactDetailsViewController : UITableViewController
 
-@property (nonatomic, readonly) Contact *contact;
+@property (nonatomic, strong) Contact *contact;
 @property (nonatomic, weak) id<EditContactDetailsViewControllerDelegate> delegate;
 
 - (instancetype)initWithContact:(Contact *)contact;

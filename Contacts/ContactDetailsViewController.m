@@ -22,8 +22,28 @@
 {
     [super viewDidLoad];
     
+    // Update screen
+    self.contact = self.contact;
+}
+
+- (void)setContact:(Contact *)contact
+{
+    _contact = contact;
+    
     self.contactIconImageView.image = self.contact.icon;
     self.contactNameLabel.text = [NSString stringWithFormat:@"%@ %@", self.contact.firstName, self.contact.lastName];
+}
+
+#pragma mark - Segues
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"showEditScreen"]) {
+        UINavigationController *navC = segue.destinationViewController;
+        EditContactDetailsViewController *editContactVC = [navC.viewControllers firstObject];
+        editContactVC.contact = self.contact;
+        editContactVC.delegate = self;
+    }
 }
 
 #pragma mark - EditContactDetailsViewControllerDelegate
@@ -31,7 +51,7 @@
 - (void)editContactDetailsViewController:(EditContactDetailsViewController *)editVC
                     didEndEditingContact:(Contact *)contact
 {
-
+    self.contact = contact;
 }
 
 @end

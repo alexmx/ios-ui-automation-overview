@@ -10,4 +10,13 @@
 
 @implementation Contact
 
+- (instancetype)init
+{
+    if (self = [super init]) {
+        self.icon = [UIImage imageNamed:@"contact-icon"];
+    }
+    
+    return self;
+}
+
 @end
