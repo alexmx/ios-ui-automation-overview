@@ -157,7 +157,7 @@
                                                     <rect key="frame" x="118" y="15" width="467" height="30"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
                                                     <connections>
                                                         <outlet property="delegate" destination="fyF-rt-AuR" id="XQT-QN-QL9"/>
                                                     </connections>
@@ -192,7 +192,7 @@
                                                     <rect key="frame" x="117" y="15" width="468" height="30"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
                                                     <connections>
                                                         <outlet property="delegate" destination="fyF-rt-AuR" id="AAj-Y1-taT"/>
                                                     </connections>
