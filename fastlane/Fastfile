@@ -6,10 +6,23 @@ platform :ios do
   before_all do
   end
 
-  lane :test_appium do
-    
+  lane :build do
+    xcodebuild(
+      scheme: "Contacts",
+      build: true,
+      sdk: "iphonesimulator",
+      derivedDataPath: "build",
+      xcargs: {
+        ONLY_ACTIVE_ARCH: "NO"
+      }
+    )
   end
 
+  lane :test_appium do
+    build
+    sh "cd ../appium && cucumber"
+  end
+  
   lane :test_calabash do
     
   end
@@ -28,4 +41,3 @@ platform :ios do
   error do |lane, exception|
   end
 end
-
