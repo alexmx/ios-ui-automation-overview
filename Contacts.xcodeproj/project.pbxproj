@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		145E8E5A1BFC022100307881 /* ContactCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE68D081BF0DC6F00A388DF /* ContactCell.m */; };
+		145E8E5B1BFC022100307881 /* UIColor+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE68D031BF0D64100A388DF /* UIColor+Utils.m */; };
+		145E8E5C1BFC022100307881 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE68CDC1BF0CF3E00A388DF /* AppDelegate.m */; };
+		145E8E5D1BFC022100307881 /* ContactsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE68CDF1BF0CF3E00A388DF /* ContactsListViewController.m */; };
+		145E8E5E1BFC022100307881 /* EditContactDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDAF42051BF1EB09008D6FC4 /* EditContactDetailsViewController.m */; };
+		145E8E5F1BFC022100307881 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE68D0D1BF0E1A200A388DF /* Contact.m */; };
+		145E8E601BFC022100307881 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE68CD91BF0CF3E00A388DF /* main.m */; };
+		145E8E611BFC022100307881 /* ContactDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE68CE21BF0CF3E00A388DF /* ContactDetailsViewController.m */; };
+		145E8E641BFC022100307881 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDE68CE41BF0CF3E00A388DF /* Main.storyboard */; };
+		145E8E651BFC022100307881 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDE68CE91BF0CF3E00A388DF /* LaunchScreen.xib */; };
+		145E8E661BFC022100307881 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDE68CE71BF0CF3E00A388DF /* Images.xcassets */; };
+		145E8E6D1BFC03FF00307881 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 145E8E6C1BFC03FF00307881 /* CFNetwork.framework */; };
+		145E8E701BFC047100307881 /* calabash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 145E8E6E1BFC046500307881 /* calabash.framework */; };
 		CDAF42061BF1EB09008D6FC4 /* EditContactDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDAF42051BF1EB09008D6FC4 /* EditContactDetailsViewController.m */; };
 		CDE68CDA1BF0CF3E00A388DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE68CD91BF0CF3E00A388DF /* main.m */; };
 		CDE68CDD1BF0CF3E00A388DF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE68CDC1BF0CF3E00A388DF /* AppDelegate.m */; };
@@ -32,9 +45,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		145E8E6A1BFC022100307881 /* Contacts-cal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Contacts-cal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		145E8E6C1BFC03FF00307881 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		145E8E6E1BFC046500307881 /* calabash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = calabash.framework; path = ../calabash/calabash.framework; sourceTree = "<group>"; };
 		CDAF42041BF1EB09008D6FC4 /* EditContactDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditContactDetailsViewController.h; sourceTree = "<group>"; };
 		CDAF42051BF1EB09008D6FC4 /* EditContactDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditContactDetailsViewController.m; sourceTree = "<group>"; };
-		CDE68CD41BF0CF3E00A388DF /* Contacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDE68CD41BF0CF3E00A388DF /* Contacts-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Contacts-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDE68CD81BF0CF3E00A388DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDE68CD91BF0CF3E00A388DF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CDE68CDB1BF0CF3E00A388DF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -58,6 +74,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		145E8E621BFC022100307881 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				145E8E6D1BFC03FF00307881 /* CFNetwork.framework in Frameworks */,
+				145E8E701BFC047100307881 /* calabash.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CDE68CD11BF0CF3E00A388DF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -87,8 +112,9 @@
 		CDE68CD51BF0CF3E00A388DF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CDE68CD41BF0CF3E00A388DF /* Contacts.app */,
+				CDE68CD41BF0CF3E00A388DF /* Contacts-test.app */,
 				CDE68CF01BF0CF3E00A388DF /* ContactsTests.xctest */,
+				145E8E6A1BFC022100307881 /* Contacts-cal.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -109,6 +135,8 @@
 		CDE68CD71BF0CF3E00A388DF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				145E8E6E1BFC046500307881 /* calabash.framework */,
+				145E8E6C1BFC03FF00307881 /* CFNetwork.framework */,
 				CDE68CD81BF0CF3E00A388DF /* Info.plist */,
 				CDE68CD91BF0CF3E00A388DF /* main.m */,
 			);
@@ -187,6 +215,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		145E8E581BFC022100307881 /* Contacts-cal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 145E8E671BFC022100307881 /* Build configuration list for PBXNativeTarget "Contacts-cal" */;
+			buildPhases = (
+				145E8E591BFC022100307881 /* Sources */,
+				145E8E621BFC022100307881 /* Frameworks */,
+				145E8E631BFC022100307881 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Contacts-cal";
+			productName = Contacts;
+			productReference = 145E8E6A1BFC022100307881 /* Contacts-cal.app */;
+			productType = "com.apple.product-type.application";
+		};
 		CDE68CD31BF0CF3E00A388DF /* Contacts */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CDE68CFA1BF0CF3E00A388DF /* Build configuration list for PBXNativeTarget "Contacts" */;
@@ -201,7 +246,7 @@
 			);
 			name = Contacts;
 			productName = Contacts;
-			productReference = CDE68CD41BF0CF3E00A388DF /* Contacts.app */;
+			productReference = CDE68CD41BF0CF3E00A388DF /* Contacts-test.app */;
 			productType = "com.apple.product-type.application";
 		};
 		CDE68CEF1BF0CF3E00A388DF /* ContactsTests */ = {
@@ -254,12 +299,23 @@
 			projectRoot = "";
 			targets = (
 				CDE68CD31BF0CF3E00A388DF /* Contacts */,
+				145E8E581BFC022100307881 /* Contacts-cal */,
 				CDE68CEF1BF0CF3E00A388DF /* ContactsTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		145E8E631BFC022100307881 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				145E8E641BFC022100307881 /* Main.storyboard in Resources */,
+				145E8E651BFC022100307881 /* LaunchScreen.xib in Resources */,
+				145E8E661BFC022100307881 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CDE68CD21BF0CF3E00A388DF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -280,6 +336,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		145E8E591BFC022100307881 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				145E8E5A1BFC022100307881 /* ContactCell.m in Sources */,
+				145E8E5B1BFC022100307881 /* UIColor+Utils.m in Sources */,
+				145E8E5C1BFC022100307881 /* AppDelegate.m in Sources */,
+				145E8E5D1BFC022100307881 /* ContactsListViewController.m in Sources */,
+				145E8E5E1BFC022100307881 /* EditContactDetailsViewController.m in Sources */,
+				145E8E5F1BFC022100307881 /* Contact.m in Sources */,
+				145E8E601BFC022100307881 /* main.m in Sources */,
+				145E8E611BFC022100307881 /* ContactDetailsViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CDE68CD01BF0CF3E00A388DF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -333,6 +404,50 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		145E8E681BFC022100307881 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/calabash",
+				);
+				INFOPLIST_FILE = Contacts/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-force_load",
+					"\"$(SOURCE_ROOT)/calabash/calabash.framework/calabash\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alexmx.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		145E8E691BFC022100307881 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/calabash",
+				);
+				INFOPLIST_FILE = Contacts/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-force_load",
+					"\"$(SOURCE_ROOT)/calabash/calabash.framework/calabash\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alexmx.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		CDE68CF81BF0CF3E00A388DF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -419,10 +534,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/calabash",
+				);
 				INFOPLIST_FILE = Contacts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alexmx.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(TARGET_NAME)-test";
 			};
 			name = Debug;
 		};
@@ -431,10 +550,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/calabash",
+				);
 				INFOPLIST_FILE = Contacts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alexmx.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(TARGET_NAME)-test";
 			};
 			name = Release;
 		};
@@ -471,6 +594,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		145E8E671BFC022100307881 /* Build configuration list for PBXNativeTarget "Contacts-cal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				145E8E681BFC022100307881 /* Debug */,
+				145E8E691BFC022100307881 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CDE68CCF1BF0CF3E00A388DF /* Build configuration list for PBXProject "Contacts" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

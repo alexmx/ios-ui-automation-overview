@@ -1,0 +1,5 @@
+[caps]
+platformName = "ios"
+app = "../Build/Products/Debug-iphonesimulator/Contacts-test.app"
+platformVersion = "9.1"
+deviceName = "iPhone 5s"
