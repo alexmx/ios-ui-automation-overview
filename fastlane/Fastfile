@@ -6,9 +6,9 @@ platform :ios do
   before_all do
   end
 
-  lane :build do
+  lane :build do |params|
     xcodebuild(
-      scheme: "Contacts",
+      scheme: params[:scheme],
       build: true,
       sdk: "iphonesimulator",
       derivedDataPath: "build",
@@ -19,12 +19,20 @@ platform :ios do
   end
 
   lane :test_appium do
-    build
+    build(
+      scheme: "Contacts"
+    )
+
     sh "cd ../appium && cucumber"
   end
-  
+
   lane :test_calabash do
+    build(
+      scheme: "Contacts-cal"
+    )
     
+    sh "export APP_BUNDLE_PATH=\"../Build/Products/Debug-iphonesimulator/Contacts-cal.app\""
+    sh "cd ../calabash && cucumber"
   end
 
   lane :test_ui_automation do
