@@ -24,6 +24,9 @@
     
     // Update screen
     self.contact = self.contact;
+    
+    self.view.accessibilityIdentifier = @"com.vc.contactDetails";
+    self.contactNameLabel.accessibilityIdentifier = @"com.label.contactDetails";
 }
 
 - (void)setContact:(Contact *)contact

@@ -34,6 +34,11 @@
         self.firstNameTextField.text = self.contact.firstName;
         self.lastNameTextField.text = self.contact.lastName;
     }
+    
+    self.view.accessibilityIdentifier = @"com.vc.contactsEdit";
+    
+    self.firstNameTextField.accessibilityIdentifier = @"com.textfield.firstName";
+    self.lastNameTextField.accessibilityIdentifier = @"com.textfield.lastName";
 }
 
 - (void)viewWillDisappear:(BOOL)animated

@@ -25,6 +25,15 @@
     [super viewDidLoad];
     
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    
+    self.view.accessibilityIdentifier = @"com.vc.contactsList";
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.tableView reloadData];
 }
 
 #pragma mark - Accessors
@@ -69,6 +78,8 @@
 {
     ContactCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     cell.contact = self.contacts[indexPath.row];
+    cell.isAccessibilityElement = YES;
+    cell.accessibilityIdentifier = @"com.cell.contactsList";
     
     return cell;
 }

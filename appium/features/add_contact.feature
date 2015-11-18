@@ -6,7 +6,7 @@ Feature: Create a new contact in the contacts list
 
 @s1 @add_action
 Scenario: User can add a new contact in the contacts list
-	Given I see the contact list screen
+	Given I see the contacts list screen
 	When I press on "Add" button
 	Then The screen "Edit Contact Details" appears
 	And I enter "Jon" in the "first name" textfield

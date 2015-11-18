@@ -40,12 +40,10 @@
 
 - (void)setContact:(Contact *)contact
 {
-    if (contact != _contact) {
-        _contact = contact;
-        
-        self.contactName = [NSString stringWithFormat:@"%@ %@", contact.firstName, contact.lastName];
-        self.contactIcon = contact.icon;
-    }
+    _contact = contact;
+    
+    self.contactName = [NSString stringWithFormat:@"%@ %@", contact.firstName, contact.lastName];
+    self.contactIcon = contact.icon;
 }
 
 @end
