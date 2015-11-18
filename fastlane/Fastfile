@@ -40,7 +40,9 @@ platform :ios do
   end
 
   lane :test_xc_tests do
-    
+    scan(
+      scheme: "Contacts"
+    )
   end
 
   after_all do |lane|
