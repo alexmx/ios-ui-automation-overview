@@ -31,15 +31,14 @@ platform :ios do
       scheme: "Contacts-cal"
     )
     
-    sh "export APP_BUNDLE_PATH=\"../Build/Products/Debug-iphonesimulator/Contacts-cal.app\""
-    sh "cd ../calabash && cucumber"
+    sh "cd ../calabash && APP=\"../Build/Products/Debug-iphonesimulator/Contacts-cal.app\" cucumber"
   end
 
   lane :test_ui_automation do
     
   end
 
-  lane :test_xc_tests do
+  lane :test_xctests do
     scan(
       scheme: "Contacts"
     )

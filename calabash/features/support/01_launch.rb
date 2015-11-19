@@ -14,7 +14,7 @@
 
 require 'calabash-cucumber/launcher'
 
-APP_BUNDLE_PATH = "../../../Build/Products/Debug-iphonesimulator/Contacts-cal.app"
+#APP_BUNDLE_PATH = "path/to/app.app"
 
 Before do |scenario|
   @calabash_launcher = Calabash::Cucumber::Launcher.new
