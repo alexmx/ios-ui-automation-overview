@@ -35,7 +35,11 @@ platform :ios do
   end
 
   lane :test_ui_automation do
+    build(
+      scheme: "Contacts"
+    )
     
+    sh "cd ../ui-automation && ./run-tests.sh \"../build/Products/Debug-iphonesimulator/Contacts-test.app\" \"iPhone 5s\""
   end
 
   lane :test_xctests do
