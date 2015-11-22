@@ -21,13 +21,11 @@ Contact List | Contact Details | Edit Contact | Remove Contact
 Add contact:
 
 ```gherkin
-@add_contact
 Feature: Create a new contact in the contacts list
 	In order to interact with a new contact
 	As I user
 	I want to add a new contact in my contacts list
 
-@s1 @add_action
 Scenario: User can add a new contact in the contacts list
 	Given I see the contacts list screen
 	When I press on "Add" button
@@ -41,13 +39,11 @@ Scenario: User can add a new contact in the contacts list
 Update contact:
 
 ```gherkin
-@update_contact
 Feature: Update an existing contact in the contacts list
 	In order to keep all my contacts up-to-date
 	As I user
 	I want to update an existing contact in my contacts list
 
-@s1 @update_action
 Scenario: User can update an existing contact in the contacts list
 	Given I see the contacts list screen
 	Given I see at least one contact in the list
@@ -67,13 +63,11 @@ Scenario: User can update an existing contact in the contacts list
 Remove contact:
 
 ```gherkin
-@remove_contact
 Feature: Remove an existing contact from the contacts list
 	In order to get rid of annoying contacts
 	As I user
 	I want to remove an existing contact from my contacts list
 
-@s1 @remove_action
 Scenario: User can remove an existing contact from the contacts list
 	Given I see the contacts list screen
 	Given I see at least one contact in the list
@@ -81,3 +75,23 @@ Scenario: User can remove an existing contact from the contacts list
 	And I remove the first contact
 	Then Contacts list is empty
 ```
+
+## Installation
+Make sure that `bundler` is installed on your machine:
+
+```bash
+# Check bundler version
+bundler --version
+
+# Install bundler if not installed
+sudo gem install bundler
+```
+
+Afer `bundler` is installed run:
+```bash
+bundle install
+```
+
+For **Appium** we will need to install Appium server separately. For this demo we will use Appium server standalone app.
+
+![Contact List](/assets/appium.png)
