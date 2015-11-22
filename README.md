@@ -143,5 +143,24 @@ cd ../calabash && APP=\"../Build/Products/Debug-iphonesimulator/Contacts-cal.app
 ![Contact List](/assets/calabash-firewall.png)
 
 ### UI Automation
+UI Automation is an old native solution which allows us to write UI tests using `JavaScript`.
+Tests are located in `ui-automation` folder.
 
-TBD
+Run tests:
+```bash
+# Run using fastlane
+fastlane test_ui_automation
+
+# Run manually
+xcodebuild -project Contacts.xcodeproj \
+	-scheme "Contacts" \
+	-sdk iphonesimulator \
+	-derivedDataPath "build"
+	build
+
+cd ../ui-automation && ./run-tests.sh "../build/Products/Debug-iphonesimulator/Contacts-test.app" "iPhone 5s"
+```
+**Note:** Consider UI Tests (XCTest) solution instead of UI Automation as Apple has officially deprecated UI Automation in Xcode 7.
+
+## License
+This project is licensed under the terms of the MIT license. See the LICENSE file.
