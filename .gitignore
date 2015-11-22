@@ -52,3 +52,6 @@ Carthage/Build
 
 fastlane/report.xml
 fastlane/screenshots
+
+# UI Automation Test Reports
+ui-automation/test-reports
