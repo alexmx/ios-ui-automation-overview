@@ -2,10 +2,11 @@
 An overview of popular iOS UI Automation solutions which will help you to decide which one to use.
 
 Covered solutions:
-* **UI Tests (XCTest);**
-* **UI Automation;**
-* **Appium;**
-* **Calabash.**
+* [x] **UI Tests (XCTest);**
+* [x] **UI Automation;**
+* [x] **Appium;**
+* [x] **Calabash;**
+* [ ] **KIF**
 
 In order to present proper difference between automation solutions, the same app was covered with the same testing scenarios.
 Demo application represents a simple **Contacts** app which allows us to perform basic CRUD operations over the *Contact* entity.
@@ -16,7 +17,7 @@ Contact List | Contact Details | Edit Contact | Remove Contact
 ------------ | ------------- | ------------- | -------------
 ![Contact List](/assets/contact-list.png) | ![Contact Details](/assets/contact-details.png) | ![Edit Contact](/assets/contact-edit.png) | ![Remove Contact](/assets/contact-remove.png)
 
-#### Scenarios
+## Scenarios
 
 **Add contact:**
 
@@ -78,10 +79,11 @@ bundle install
 ```
 
 For **Appium** we will need to install Appium server separately. For this demo we will use Appium server standalone app.
+Check out [this guide](http://github.com) for more details related to Appium server installation.
 
 ![Appium Standalone App](/assets/appium.png)
 
-## Running
+## Run Tests
 
 For all solutions there are two options to run the tests, first one is using `fastlane` and the second one is manuall run.
 
@@ -161,6 +163,13 @@ xcodebuild -project Contacts.xcodeproj \
 cd ../ui-automation && ./run-tests.sh "../build/Products/Debug-iphonesimulator/Contacts-test.app" "iPhone 5s"
 ```
 **Note:** Consider UI Tests (XCTest) solution instead of UI Automation as Apple has officially deprecated UI Automation in Xcode 7.
+
+## References
+
+* [Appium Github page](https://github.com/appium/appium);
+* [Calabash iOS Github page](https://github.com/calabash/calabash-ios);
+* [UI Automation API reference guide](https://developer.apple.com/library/ios/documentation/DeveloperTools/Reference/UIAutomationRef/);
+* [UITests presentation at WWDC 2015](https://developer.apple.com/videos/play/wwdc2015-406/).
 
 ## License
 This project is licensed under the terms of the MIT license. See the LICENSE file.
