@@ -85,35 +85,33 @@ Check out [this guide](http://github.com) for more details related to Appium ser
 
 ## Run Tests
 
-For all solutions there are two options to run the tests, first one is using `fastlane` and the second one is manuall run.
+For all solutions there are two options to run the tests, manual run or using `fastlane` tools.
+[Fastlane](https://github.com/fastlane/fastlane) is a tool which lets you define and run your deployment pipelines for different environments.
 
 ### UI Tests (XCTest)
 UI tests were introduced in XCode 7. It is native solution which allows us to write UI tests using `Objective-C` or `Swift`.
 Tests are located in `ContactsUITests` folder.
 
-Run tests:
+**Run manually:**
 ```bash
-# Run using fastlane
-fastlane test_xctests
-
-# Run manually
 xcodebuild -project Contacts.xcodeproj \
 	-scheme "Contacts" \
 	-sdk iphonesimulator \
 	-destination 'platform=iOS Simulator,name=iPhone 6,OS=9.1'
 	test
 ```
+
+**Run with `fastlane`:**
+```bash
+fastlane test_xctests
+```
 **Note:** UI tests can be run directly from Xcode: `Product -> Test`
 
 ### Appium
 Appium is an open source test automation framework for use with native, hybrid and mobile web apps. It drives iOS and Android apps using the WebDriver protocol. Appium supports client libraries for multiple programming languages `Java`, `Python`, `Ruby`, `JavaScript`, `PHP` and `C#`. Tests were written in `Ruby` and are located in `appium` folder.
 
-Run tests:
+**Run manually:**
 ```bash
-# Run using fastlane
-fastlane test_appium
-
-# Run manually
 xcodebuild -project Contacts.xcodeproj \
 	-scheme "Contacts" \
 	-sdk iphonesimulator \
@@ -122,17 +120,18 @@ xcodebuild -project Contacts.xcodeproj \
 
 cd ../appium && cucumber
 ```
+
+**Run with fastlane:**
+```bash
+fastlane test_appium
+```
 **Note:** Appium server should be running while running tests.
 
 ### Calabash
 Calabash is an automated testing technology for Android and iOS native and hybrid applications. It is a free-to-use open source project that is developed and maintained by Xamarin. Calabash has two client libraries for `Ruby` and `Java`. Tests were written in `Ruby` and are located in `calabash` folder.
 
-Run tests:
+**Run manually:**
 ```bash
-# Run using fastlane
-fastlane test_calabash
-
-# Run manually
 xcodebuild -project Contacts.xcodeproj \
 	-scheme "Contacts-cal" \
 	-sdk iphonesimulator \
@@ -141,6 +140,11 @@ xcodebuild -project Contacts.xcodeproj \
 
 cd ../calabash && APP=\"../Build/Products/Debug-iphonesimulator/Contacts-cal.app\" cucumber
 ```
+
+**Run with fastlane:**
+```bash
+fastlane test_calabash
+```
 **Note:** Before running calabash tests disable firewall otherwise the prompt below will appear on every simulator run:
 ![Contact List](/assets/calabash-firewall.png)
 
@@ -148,12 +152,8 @@ cd ../calabash && APP=\"../Build/Products/Debug-iphonesimulator/Contacts-cal.app
 UI Automation is an old native solution which allows us to write UI tests using `JavaScript`.
 Tests are located in `ui-automation` folder.
 
-Run tests:
+**Run manually:**
 ```bash
-# Run using fastlane
-fastlane test_ui_automation
-
-# Run manually
 xcodebuild -project Contacts.xcodeproj \
 	-scheme "Contacts" \
 	-sdk iphonesimulator \
@@ -161,6 +161,11 @@ xcodebuild -project Contacts.xcodeproj \
 	build
 
 cd ../ui-automation && ./run-tests.sh "../build/Products/Debug-iphonesimulator/Contacts-test.app" "iPhone 5s"
+```
+
+**Run with fastlane:**
+```bash
+fastlane test_ui_automation
 ```
 **Note:** Consider UI Tests (XCTest) solution instead of UI Automation as Apple has officially deprecated UI Automation in Xcode 7.
 
