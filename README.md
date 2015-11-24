@@ -119,7 +119,7 @@ xcodebuild -project Contacts.xcodeproj \
 	-derivedDataPath "build" \
 	build
 
-cd appium && cucumber
+cd appium && bundle exec cucumber
 ```
 
 **Run with fastlane:**
@@ -139,7 +139,7 @@ xcodebuild -project Contacts.xcodeproj \
 	-derivedDataPath "build" \
 	build
 
-cd calabash && APP=\"../Build/Products/Debug-iphonesimulator/Contacts-cal.app\" cucumber
+cd calabash && APP=\"../Build/Products/Debug-iphonesimulator/Contacts-cal.app\" bundle exec cucumber
 ```
 
 **Run with fastlane:**
@@ -161,7 +161,7 @@ xcodebuild -project Contacts.xcodeproj \
 	-derivedDataPath "build" \
 	build
 
-cd ui-automation && ./run-tests.sh "../build/Products/Debug-iphonesimulator/Contacts-test.app" "iPhone 5s"
+cd ui-automation && ./run-tests.sh "../build/Products/Debug-iphonesimulator/Contacts-test.app" "iPhone 6 (9.1)"
 ```
 
 **Run with fastlane:**
