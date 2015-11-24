@@ -22,7 +22,6 @@ xcuserdata
 *.moved-aside
 *.xcuserstate
 *.xcscmblueprint
-*.xcscheme
 
 ## Obj-C/Swift specific
 *.hmap
@@ -53,5 +52,6 @@ Carthage/Build
 fastlane/report.xml
 fastlane/screenshots
 
-# UI Automation Test Reports
+# Test Reports/Outputs
 ui-automation/test-reports
+test_output/
