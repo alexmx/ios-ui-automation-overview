@@ -63,7 +63,8 @@ Scenario: User can remove an existing contact from the contacts list
 ```
 
 ## Installation
-Make sure that `bundler` is installed on your machine:
+We will use `bundler` to install dependencies such as `calabash`, `appium`, `fastlane`.
+Make sure that [`bundler`](http://bundler.io/) is installed on your machine:
 
 ```bash
 # Check bundler version
@@ -79,9 +80,8 @@ bundle install
 ```
 
 For **Appium** we will need to install Appium server separately. For this demo we will use Appium server standalone app.
-Check out [this guide](http://github.com) for more details related to Appium server installation.
-
 ![Appium Standalone App](/assets/appium.png)
+Check out [this guide](https://github.com/appium/appium) for more details related to Appium server installation.
 
 ## Run Tests
 
@@ -118,7 +118,7 @@ xcodebuild -project Contacts.xcodeproj \
 	-derivedDataPath "build"
 	build
 
-cd ../appium && cucumber
+cd appium && cucumber
 ```
 
 **Run with fastlane:**
@@ -138,7 +138,7 @@ xcodebuild -project Contacts.xcodeproj \
 	-derivedDataPath "build"
 	build
 
-cd ../calabash && APP=\"../Build/Products/Debug-iphonesimulator/Contacts-cal.app\" cucumber
+cd calabash && APP=\"../Build/Products/Debug-iphonesimulator/Contacts-cal.app\" cucumber
 ```
 
 **Run with fastlane:**
@@ -160,7 +160,7 @@ xcodebuild -project Contacts.xcodeproj \
 	-derivedDataPath "build"
 	build
 
-cd ../ui-automation && ./run-tests.sh "../build/Products/Debug-iphonesimulator/Contacts-test.app" "iPhone 5s"
+cd ui-automation && ./run-tests.sh "../build/Products/Debug-iphonesimulator/Contacts-test.app" "iPhone 5s"
 ```
 
 **Run with fastlane:**
