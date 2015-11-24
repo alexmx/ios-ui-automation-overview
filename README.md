@@ -78,6 +78,7 @@ Afer `bundler` is installed run:
 ```bash
 bundle install
 ```
+If you get an error related to `nokogiri` installation, please consider this installation [guide](http://www.nokogiri.org/tutorials/installing_nokogiri.html) for `nokogiri` gem.
 
 For **Appium** we will need to install Appium server separately. For this demo we will use Appium server standalone app.
 ![Appium Standalone App](/assets/appium.png)
@@ -97,7 +98,7 @@ Tests are located in `ContactsUITests` folder.
 xcodebuild -project Contacts.xcodeproj \
 	-scheme "Contacts" \
 	-sdk iphonesimulator \
-	-destination 'platform=iOS Simulator,name=iPhone 6,OS=9.1'
+	-destination 'platform=iOS Simulator,name=iPhone 6,OS=9.1' \
 	test
 ```
 
@@ -115,7 +116,7 @@ Appium is an open source test automation framework for use with native, hybrid a
 xcodebuild -project Contacts.xcodeproj \
 	-scheme "Contacts" \
 	-sdk iphonesimulator \
-	-derivedDataPath "build"
+	-derivedDataPath "build" \
 	build
 
 cd appium && cucumber
@@ -135,7 +136,7 @@ Calabash is an automated testing technology for Android and iOS native and hybri
 xcodebuild -project Contacts.xcodeproj \
 	-scheme "Contacts-cal" \
 	-sdk iphonesimulator \
-	-derivedDataPath "build"
+	-derivedDataPath "build" \
 	build
 
 cd calabash && APP=\"../Build/Products/Debug-iphonesimulator/Contacts-cal.app\" cucumber
@@ -157,7 +158,7 @@ Tests are located in `ui-automation` folder.
 xcodebuild -project Contacts.xcodeproj \
 	-scheme "Contacts" \
 	-sdk iphonesimulator \
-	-derivedDataPath "build"
+	-derivedDataPath "build" \
 	build
 
 cd ui-automation && ./run-tests.sh "../build/Products/Debug-iphonesimulator/Contacts-test.app" "iPhone 5s"
