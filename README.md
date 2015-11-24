@@ -1,4 +1,7 @@
 # iOS UI Automation Overview
+[![Twitter: @amaimescu](https://img.shields.io/badge/contact-%40amaimescu-blue.svg)](https://twitter.com/amaimescu)
+[![License](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/alexmx/ios-ui-automation-overview/blob/master/LICENSE)
+
 An overview of popular iOS UI Automation solutions which will help you to decide which one to use.
 
 Covered solutions:
