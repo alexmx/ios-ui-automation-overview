@@ -23,7 +23,7 @@ platform :ios do
       scheme: "Contacts"
     )
 
-    sh "cd ../appium && cucumber"
+    sh "cd ../appium && bundle exec cucumber"
   end
 
   lane :test_calabash do
@@ -31,7 +31,7 @@ platform :ios do
       scheme: "Contacts-cal"
     )
     
-    sh "cd ../calabash && APP=\"../Build/Products/Debug-iphonesimulator/Contacts-cal.app\" cucumber"
+    sh "cd ../calabash && APP=\"../Build/Products/Debug-iphonesimulator/Contacts-cal.app\" bundle exec cucumber"
   end
 
   lane :test_ui_automation do
@@ -39,7 +39,7 @@ platform :ios do
       scheme: "Contacts"
     )
     
-    sh "cd ../ui-automation && ./run-tests.sh \"../build/Products/Debug-iphonesimulator/Contacts-test.app\" \"iPhone 5s\""
+    sh "cd ../ui-automation && ./run-tests.sh \"../build/Products/Debug-iphonesimulator/Contacts-test.app\" \"iPhone 5s (9.1)\""
   end
 
   lane :test_xctests do
