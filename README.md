@@ -1,4 +1,7 @@
 # iOS UI Automation Overview
+[![Twitter: @amaimescu](https://img.shields.io/badge/contact-%40amaimescu-blue.svg)](https://twitter.com/amaimescu)
+[![License](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/alexmx/ios-ui-automation-overview/blob/master/LICENSE)
+
 An overview of popular iOS UI Automation solutions which will help you to decide which one to use.
 
 Covered solutions:
@@ -78,7 +81,17 @@ Afer `bundler` is installed run:
 ```bash
 bundle install
 ```
-If you get an error related to `nokogiri` installation, please consider this installation [guide](http://www.nokogiri.org/tutorials/installing_nokogiri.html) for `nokogiri` gem.
+If you get an error related to `nokogiri` installation, please consider the steps below:
+```bash
+# Install libxml2 library using homebrew
+brew install libxml2
+
+# Install 'nokogiri' gem manually
+sudo env ARCHFLAGS="-arch x86_64" gem install nokogiri:1.6.6.4 -- --with-xml=/usr/local/Cellar/libxml2/2.9.2
+
+# Continue installation of dependencies
+bundle install
+```
 
 For **Appium** we will need to install Appium server separately. For this demo we will use Appium server standalone app.
 ![Appium Standalone App](/assets/appium.png)
@@ -119,7 +132,7 @@ xcodebuild -project Contacts.xcodeproj \
 	-derivedDataPath "build" \
 	build
 
-cd appium && cucumber
+cd appium && bundle exec cucumber
 ```
 
 **Run with fastlane:**
@@ -139,7 +152,7 @@ xcodebuild -project Contacts.xcodeproj \
 	-derivedDataPath "build" \
 	build
 
-cd calabash && APP=\"../Build/Products/Debug-iphonesimulator/Contacts-cal.app\" cucumber
+cd calabash && APP="../Build/Products/Debug-iphonesimulator/Contacts-cal.app" bundle exec cucumber
 ```
 
 **Run with fastlane:**
@@ -161,7 +174,7 @@ xcodebuild -project Contacts.xcodeproj \
 	-derivedDataPath "build" \
 	build
 
-cd ui-automation && ./run-tests.sh "../build/Products/Debug-iphonesimulator/Contacts-test.app" "iPhone 5s"
+cd ui-automation && ./run-tests.sh "../build/Products/Debug-iphonesimulator/Contacts-test.app" "iPhone 6 (9.1)"
 ```
 
 **Run with fastlane:**
