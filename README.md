@@ -152,7 +152,7 @@ xcodebuild -project Contacts.xcodeproj \
 	-derivedDataPath "build" \
 	build
 
-cd calabash && APP=\"../Build/Products/Debug-iphonesimulator/Contacts-cal.app\" bundle exec cucumber
+cd calabash && APP="../Build/Products/Debug-iphonesimulator/Contacts-cal.app" bundle exec cucumber
 ```
 
 **Run with fastlane:**
