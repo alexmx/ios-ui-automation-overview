@@ -81,7 +81,17 @@ Afer `bundler` is installed run:
 ```bash
 bundle install
 ```
-If you get an error related to `nokogiri` installation, please consider this installation [guide](http://www.nokogiri.org/tutorials/installing_nokogiri.html) for `nokogiri` gem.
+If you get an error related to `nokogiri` installation, please consider the steps below:
+```bash
+# Install libxml2 library using homebrew
+brew install libxml2
+
+# Install 'nokogiri' gem manually
+sudo env ARCHFLAGS="-arch x86_64" gem install nokogiri:1.6.6.4 -- --with-xml=/usr/local/Cellar/libxml2/2.9.2
+
+# Continue installation of dependencies
+bundle install
+```
 
 For **Appium** we will need to install Appium server separately. For this demo we will use Appium server standalone app.
 ![Appium Standalone App](/assets/appium.png)
