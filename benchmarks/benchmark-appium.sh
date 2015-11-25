@@ -10,4 +10,7 @@ xcodebuild -project "../Contacts.xcodeproj" \
 
 cd "../appium" && bundle exec cucumber
 
+END=$(date +%s)
+DIFF=$(echo "$END - $START" | bc)
+
 echo "Time elapsed: $DIFF"

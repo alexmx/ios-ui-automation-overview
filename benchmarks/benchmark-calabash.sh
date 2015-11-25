@@ -10,4 +10,7 @@ xcodebuild -project "../Contacts.xcodeproj" \
 
 cd "../calabash" && APP="../Build/Products/Debug-iphonesimulator/Contacts-cal.app" bundle exec cucumber
 
+END=$(date +%s)
+DIFF=$(echo "$END - $START" | bc)
+
 echo "Time elapsed: $DIFF"

@@ -8,6 +8,9 @@ xcodebuild -project "../Contacts.xcodeproj" \
     -derivedDataPath "../build" \
     build
 
-cd "../ui-automation" && ./run-tests.sh "../build/Products/Debug-iphonesimulator/Contacts-test.app" "iPhone 6 (9.1)"
+cd "../ui-automation" && ./run-tests.sh "../build/Products/Debug-iphonesimulator/Contacts-test.app" "iPhone 5s (9.1)"
+
+END=$(date +%s)
+DIFF=$(echo "$END - $START" | bc)
 
 echo "Time elapsed: $DIFF"
