@@ -183,6 +183,15 @@ fastlane test_ui_automation
 ```
 **Note:** Consider UI Tests (XCTest) solution instead of UI Automation as Apple has officially deprecated UI Automation in Xcode 7.
 
+## Benchmarks
+The `benchmarks` folder contains some scripts to measure the tests running time for all covered solutions.
+Some results taken on MacBook Air (Late 2014):
+
+UI Tests (XCTest) | Appium | Calabash | UI Automation
+------------ | ------------- | ------------- | -------------
+54s | 3m 53s | 1m 59s | 45s
+
+
 ## References
 
 * [Appium Github page](https://github.com/appium/appium);
