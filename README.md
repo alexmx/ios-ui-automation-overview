@@ -14,12 +14,6 @@ Covered solutions:
 In order to present proper difference between automation solutions, the same app was covered with the same testing scenarios.
 Demo application represents a simple **Contacts** app which allows us to perform basic CRUD operations over the *Contact* entity.
 
-#### Demo app
-
-Contact List | Contact Details | Edit Contact | Remove Contact
------------- | ------------- | ------------- | -------------
-![Contact List](/assets/contact-list.png) | ![Contact Details](/assets/contact-details.png) | ![Edit Contact](/assets/contact-edit.png) | ![Remove Contact](/assets/contact-remove.png)
-
 ## Scenarios
 
 **Add contact:**
